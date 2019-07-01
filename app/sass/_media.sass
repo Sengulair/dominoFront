@@ -1,0 +1,134 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+	.two-blocks>.wrapper-item
+		&:first-child .half-container
+			margin-left: calc(50vw - 960px / 2)
+		&:last-child .half-container
+			margin-right: calc(50vw - 960px / 2)
+		.half-container
+			width: calc(927px / 2)
+//Medium: ≥768px
++media-breakpoint-down(md)
+	.waterwheel-carousel
+		height: 360px
+	.characteristic-item
+		margin-right: 50px
+	nav ul li
+		margin: 0 5px
+	.two-blocks>.wrapper-item
+		&:first-child .half-container
+			margin-left: calc(50vw - 720px / 2)
+		&:last-child .half-container
+			margin-right: calc(50vw - 720px / 2)
+		.half-container
+			width: calc(705px / 2)
+//Small: ≥576px
++media-breakpoint-down(sm)
+	.characteristic-item
+		margin: 0
+	.list-areas li 
+		&.opened
+			.wrapper-area:after
+				top: calc(50% - 22px)
+		.wrapper-area
+			flex-direction: column
+			&:after
+				top: calc(50% - 29px)
+		.wrapper-left
+			flex-direction: column
+			align-items: flex-start
+		.wrapper-right
+			margin-right: 22px
+			justify-content: space-between
+	header nav
+		display: none
+	.two-blocks
+		flex-wrap: wrap
+		height: auto
+		flex-direction: column-reverse
+		>.wrapper-item
+			width: 100%
+			height: calc(100vh - 80px)
+			min-height: 570px
+			&:first-child
+				border-right: 0
+			.half-container
+				margin: 0 30px !important
+				width: calc(100% - 60px)
+	footer nav
+		margin-left: auto
+		margin: auto
+		text-align: center
+		ul
+			flex-direction: column
+	.two-blocks
+	
+//Extra small: >0
++media-breakpoint-down(xs)
+	.list-areas li.opened .wrapper-buttons
+		flex-direction: column
+	.waterwheel-carousel 
+		background: url(../img/no-photos.svg) no-repeat center/50%
+		img
+			width: calc(100% - 20px) !important
+			left: 10px !important
+	#select-stage-scheme
+		position: relative
+		margin: auto
+	.wrapper-areas, .wrapper-scheme
+		padding: 0 15px
+		display: flex
+		flex-direction: column
+		h1
+			font-size: 16px
+	.wrapper-header
+		flex-direction: column
+		justify-content: center
+		h2
+			margin: auto
+	header .wrap-contact
+		flex-direction: column-reverse
+		>*
+			margin-top: 10px
+	#google-map, .google-map
+		position: absolute
+	.two-blocks>.wrapper-item 
+		height: min-content
+		// &.with-map
+		// 	height: 
+		h3
+			font-size: 16px
+	.wrapper-slider-outer .next, .wrapper-slider-outer .prev
+		width: 30px
+		height: 30px
+	.info-block
+		max-width: 100%
+		position: relative
+		left: auto
+		bottom: auto
+		margin: 275px 20px 20px
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)

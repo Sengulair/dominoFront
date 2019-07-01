@@ -1,0 +1,6 @@
+node_modules/
+convert-to-webp.js
+package-lock.json
+*.rar
+
+/dist/

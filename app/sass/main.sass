@@ -1,0 +1,422 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+ul, li
+	list-style-type: none
+	padding: 0
+	margin: 0
+
+h1, h2, h3, h4, h5, h6 
+	margin: 0
+
+
+a
+	color: inherit
+	&:hover
+		color: inherit
+		text-decoration: none
+
+img
+	max-width: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	display: flex
+	flex-direction: column
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.main-wrap
+	flex: 1
+	main
+		height: 100%
+
+.button
+	background: #fff
+	font-weight: 300
+	font-size: 14px
+	border: 0.5px solid
+	text-transform: uppercase
+	padding: 10px 25px
+	letter-spacing: 1px
+	cursor: pointer
+	text-align: center
+
+header, footer
+	padding: 20px 0
+	.wrap-contact
+		display: flex
+		align-items: center
+		>*:last-child
+			margin-left: 10px
+
+.facebook
+	svg
+		width: 15px
+
+nav
+	margin-left: auto
+	ul
+		display: flex
+		li
+			margin: 0 10px
+			a
+				padding: 0 5px
+				border-bottom: 1px solid transparent
+				&:hover
+					border-bottom-color: #000
+
+.wrapper-scheme
+	position: relative
+#select-stage-scheme
+	font-size: 14px
+	font-weight: 300
+	position: absolute
+	right: 0
+
+.wrapper-areas
+	width: 100%
+	h1
+		font-size: 20px
+		font-weight: 700
+		margin: 20px 0
+		margin-left: 15px
+
+.list-areas
+	li
+		.wrapper-area
+			border: 1px solid #f0f0f0
+			display: flex
+			padding: 12px 15px 
+			position: relative
+			margin-bottom: 20px
+			&:after
+				content: ''
+				position: absolute
+				top: calc(50% - 7px)
+				right: 20px
+				width: 10px
+				height: 10px
+				opacity: .4
+				border-bottom: 1px solid
+				border-right: 1px solid
+				transform: rotateZ(45deg)
+		.wrapper-content-item, .wrapper-buttons
+			display: none
+		.wrapper-buttons
+			.button
+				width: 200px
+				font-size: 12px
+				margin: 0 10px 30px
+		&.opened
+			.wrapper-content-item, .wrapper-buttons
+				display: flex
+				align-items: center
+				justify-content: center
+			.wrapper-area
+				background: #f0f0f0
+				&:after
+					top: calc(50% - 2px)
+					transform: rotateZ(225deg)
+		.area-name
+			font-size: 16px
+			font-weight: 600
+			margin-right: 15px
+		.status
+			color: #00AC22
+			font-size: 10px
+		.wrapper-left
+			margin-right: auto
+		.wrapper-left, .wrapper-right
+			align-items: center
+			display: flex
+
+.characteristic-item
+	display: flex
+	flex-direction: column
+	font-size: 12px
+	font-weight: 300
+	margin-right: 100px
+	.value
+		font-size: 14px
+		&:before
+			margin-right: 5px
+			content: ''
+			width: 10px
+			height: 10px
+			display: inline-block
+			background: url(../img/select-an-objecto-tool.svg)
+
+.wrapper-header
+	width: 100%
+	display: flex
+	align-items: center
+	font-size: 14px
+	font-weight: 300
+	.button
+		font-size: 12px
+	h2
+		margin-right: auto
+		font-size: 20px
+		font-weight: 400
+
+.two-blocks
+	display: flex
+	position: relative
+	height: calc(100vh - 80px - 73px)
+	min-height: 560px
+	>.wrapper-item
+		width: 50%
+		display: flex
+		position: relative
+		.half-container
+			width: calc(1100px / 2)
+			bottom: 20%
+			position: absolute
+			> .row
+				flex-direction: column
+				.button
+					width: 200px
+					border: 0
+					text-transform: lowercase
+		&:first-child
+			border-right: 0.5px solid #fff
+			.half-container
+				margin-left: calc(50vw - 1140px / 2)
+				left: 0
+		&:last-child
+			.half-container
+				margin-right: calc(50vw - 1140px / 2)
+				right: 0
+				text-align: right
+				>.row
+					align-items: flex-end
+		h3
+			margin-bottom: 15px
+			font-size: 25px
+			text-transform: uppercase
+			color: #fff
+			font-weight: 700
+		.wrapper-img
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			z-index: -1
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: #000
+				opacity: .32
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+.hidden-form
+	position: fixed
+	width: 100%
+	z-index: 1000
+	height: 100vh
+	top: 0
+	left: 0
+	background-color: rgba(0, 0, 0, .8)
+	display: none
+	.popup
+		position: absolute
+		width: 435px
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		padding: 25px 30px
+		box-sizing: border-box
+		background-color: #fff
+		font-size: 14px
+		font-weight: 400
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		strong
+			text-transform: uppercase
+			margin-bottom: 45px
+		input
+			text-align: center
+			width: 100%
+			border: 0
+			border-bottom: 1px solid #000
+			margin-bottom: 30px
+		button[type=submit]
+			width: 100%
+
+#google-map, .google-map
+	width: 100%
+	height: 100%
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: #000
+		opacity: .16
+
+.info-block
+	background: #fff
+	position: absolute
+	bottom: 10%
+	left: 5%
+	max-width: 70%
+	font-size: 14px
+	padding: 15px 15px
+	box-shadow: 0 3px 6px rgba(0,0,0,.16)
+	.button
+		width: 100%
+		text-transform: lowercase
+	.list-characteristics
+		li
+			text-transform: uppercase
+			.value
+				display: block
+				padding-left: 25px
+				font-weight: 700
+				font-size: 20px
+			&:before
+				content: ''
+				width: 20px
+				height: 20px
+				margin-right: 5px
+				display: inline-block
+				background-repeat: no-repeat
+				background-size: 100% 
+				vertical-align: text-bottom
+			&:nth-child(1)
+				&:before
+					background: url(../img/select-an-objecto-tool.svg)
+			&:nth-child(2)
+				&:before
+					background: url(../img/step.svg)
+			&:nth-child(3)
+				&:before
+					background: url(../img/train.svg)
+			&:nth-child(4)
+				&:before
+					background: url(../img/square-layout-with-black-square-on-southeast-area.svg)
+			.value
+
+.wrapper-slider-outer
+	margin-top: 2px
+	position: relative
+	.prev
+		background: url(../img/back.svg)
+		left: 2%
+	.next
+		background: url(../img/next.svg)
+		right: 2%
+	.prev, .next
+		width: 70px
+		height: 70px
+		border: 0
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 1
+		cursor: pointer
+		&:focus
+			outline: 0
+
+.wrapper-full-slider
+	.wrapper-img
+		width: 100%
+		height: 37vw
+		position: relative
+		img
+			height: 100%
+			width: 100%
+			object-fit: cover
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: linear-gradient(to right, rgba(0,0,0,0.2) 0%, rgba(30,30,30,0.10) 15%, rgba(44,44,44,0) 50%, rgba(26,26,26,0.07) 83%, rgba(0,0,0,0.2) 100%)
+
+
+
+.waterwheel-carousel
+	background: url(../img/no-photos.svg) no-repeat center/25%
+	height: 500px
+	flex: 1
+	position: relative
+	clear: both
+	margin: 0 auto
+
+.waterwheel-carousel img
+	visibility: hidden
+	cursor: pointer
+	max-width: 100%
+	width: 700px
+	height: 4700px
+	max-height: 500px
+	object-fit: cover
+
+.prev-slide, .next-slide
+	width: 50px
+	height: 50px
+	background: #fff
+	color: #000
+	font-size: 25px
+	border: 1px solid #000
+	transition: .25s
+	cursor: pointer
+	&[disabled]
+		opacity: .3
+		&:hover
+			background: inherit
+			color: inherit
+	&:focus
+		outline: 0
+	&:hover
+		background: #000
+		color: #fff
+
+footer
+	
+@import "media" // Always at the end
