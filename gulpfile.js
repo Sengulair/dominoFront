@@ -54,6 +54,9 @@ gulp.task('js', function() {
 		'app/libs/slick-carousel/slick/slick.min.js',
 		'app/libs/equal-height/dist/jquery.equalHeight.min.js',
 		'app/libs/waterwheel-carousel/jquery.waterwheelCarousel.min.js',
+		'app/libs/jquery-mousewheel-3.1.13/jquery.mousewheel.min.js',
+		'app/libs/hammer/hammer.min.js',
+		'app/libs/mapplic/mapplic.js',
 		'app/js/common.js', // Always at the end
 		], {allowEmpty: true})
 	.pipe(concat('scripts.min.js'))

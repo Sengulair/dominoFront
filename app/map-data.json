@@ -1,0 +1,46 @@
+{
+  "mapwidth": "1500",
+  "mapheight": "1000",
+  "levels": [
+    {
+      "id": "1",
+      "title": "1 этаж",
+      "map": "../img/map/1_stage.svg",
+      "locations": [
+        
+      ]
+		},
+		{
+      "id": "2",
+      "title": "2 этаж",
+      "map": "../img/map/2_stage.svg",
+      "locations": [
+        
+      ]
+		},
+		{
+      "id": "3",
+      "title": "3 этаж",
+      "map": "../img/map/3_stage.svg",
+      "locations": [
+        
+      ]
+		},
+		{
+      "id": "4",
+      "title": "4 этаж",
+      "map": "../img/map/4_stage.svg",
+      "locations": [
+        
+      ]
+		},
+		{
+      "id": "5",
+      "title": "10 этаж",
+      "map": "../img/map/10_stage.svg",
+      "locations": [
+        
+      ]
+    }
+  ]
+}

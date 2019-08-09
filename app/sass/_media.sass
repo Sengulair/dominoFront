@@ -18,6 +18,16 @@
 			width: calc(927px / 2)
 //Medium: ≥768px
 +media-breakpoint-down(md)
+	.about-us
+		margin: 50px
+	.about-us-page .two-blocks
+		flex-wrap: wrap
+		.wrapper-item
+			width: 100%
+			height: auto
+			min-height: auto
+			&:last-child
+				order: -1
 	.waterwheel-carousel
 		height: 360px
 	.characteristic-item
@@ -33,6 +43,15 @@
 			width: calc(705px / 2)
 //Small: ≥576px
 +media-breakpoint-down(sm)
+	.contacts-page .wrapper-item:last-child
+		order: -1
+		height: auto
+		min-height: unset
+	.two-blocks>.wrapper-item.with-map
+		&.left
+			top: 0
+		&.right
+			top: auto
 	.characteristic-item
 		margin: 0
 	.list-areas li 
@@ -54,7 +73,7 @@
 	.two-blocks
 		flex-wrap: wrap
 		height: auto
-		flex-direction: column-reverse
+		// flex-direction: column-reverse
 		>.wrapper-item
 			width: 100%
 			height: calc(100vh - 80px)
@@ -70,10 +89,15 @@
 		text-align: center
 		ul
 			flex-direction: column
-	.two-blocks
 	
 //Extra small: >0
 +media-breakpoint-down(xs)
+	.team-list .descr
+		margin-right: 15px
+	.about-us
+		margin: 15px
+	.contacts-page h1
+		text-align: center
 	.list-areas li.opened .wrapper-buttons
 		flex-direction: column
 	.waterwheel-carousel 
@@ -95,6 +119,7 @@
 		justify-content: center
 		h2
 			margin: auto
+			margin-bottom: 10px
 	header .wrap-contact
 		flex-direction: column-reverse
 		>*
@@ -102,7 +127,7 @@
 	#google-map, .google-map
 		position: absolute
 	.two-blocks>.wrapper-item 
-		height: min-content
+		// height: min-content
 		// &.with-map
 		// 	height: 
 		h3
@@ -115,7 +140,7 @@
 		position: relative
 		left: auto
 		bottom: auto
-		margin: 275px 20px 20px
+		margin: auto 20px 20px
 /*==========  Mobile First  ==========*/
 
 //Extra small: <576px
@@ -123,7 +148,8 @@
 
 //Small: ≤576px
 +media-breakpoint-up(sm)
-
+	.characteristic-item
+		min-width: 100px
 //Medium: ≤768px
 +media-breakpoint-up(md)
 

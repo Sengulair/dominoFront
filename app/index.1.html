@@ -62,18 +62,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="wrapper-scheme">
-						<select name="" id="select-stage-scheme">
-							<option value="1" selected>1 ЭТАЖ</option>
-							<option value="2">2 ЭТАЖ</option>
-						</select>
-						<div class="wrapper-img">
-							<img src="img/2nd_003.webp" alt="">
+						<div class="wrapper-img" id="mapplic">
+
 						</div>
+
 					</div>
 					<div class="wrapper-areas">
 						<h1>Список свободных площадей</h1>
 						<ul class="list-areas">
-							<li>
+							<li id="id_to">
 								<div class="wrapper-area">
 									<div class="wrapper-left">
 										<h3 class="area-name">Название площади</h3><span class="status">активно</span>
@@ -127,21 +124,22 @@
 								</div>
 								<div class="wrapper-content-item">
 									<button class="prev-slide" disabled>
-										<</button> <div class="waterwheel-carousel">
+									</button>
+									<div class="waterwheel-carousel">
+									</div>
+									<button class="next-slide" disabled>></button>
 								</div>
-								<button class="next-slide" disabled>></button>
-					</div>
-					<div class="wrapper-buttons">
-						<button class="button">Забронировать</button>
-						<button class="button popup-button">Заказать просмотр</button>
-					</div>
-					</li>
+								<div class="wrapper-buttons">
+									<button class="button">Забронировать</button>
+									<button class="button popup-button">Заказать просмотр</button>
+								</div>
+							</li>
 
-					</ul>
+						</ul>
+					</div>
 				</div>
 			</div>
-	</div>
-	</main>
+		</main>
 	</div>
 
 	<footer>
@@ -168,7 +166,127 @@
 		</div>
 	</footer>
 	<script src="js/scripts.min.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			$('#mapplic').mapplic({
+				source: {
+					"mapwidth": "1597",
+					"mapheight": "1296",
+					"levels": [{
+							"id": "1",
+							"title": "0 этаж",
+							"map": "../img/map/1_0_stage.svg",
+							"locations": [{
+									"id": "my_id",
+									"title": "Example Title",
+									"description": "<p>Площадь: <span>100 м2</span></p><p>Стоимость аренды: <span>500$</span></p>",
+									"link": "#id_to",
+									"zoom": "2",
+									"fill": "#000"
+								},
+								{
+									"id": "my_id2",
+									"title": "Example Title2",
+									"description": "Example description2",
+									"link": "#id_to",
+									"zoom": "3",
+									"fill": "#000"
+								}
+							]
+						},
+						{
+							"id": "2",
+							"title": "1 этаж",
+							"map": "../img/map/1_1_stage.svg",
+							"locations": [
 
+							]
+						},
+						{
+							"id": "3",
+							"title": "2 этаж",
+							"map": "../img/map/1_2_stage.svg",
+							"locations": [
+
+							]
+						},
+						{
+							"id": "4",
+							"title": "3 этаж",
+							"map": "../img/map/1_3_stage.svg",
+							"locations": [
+
+							]
+						},
+						{
+							"id": "6",
+							"title": "4 этаж",
+							"map": "../img/map/1_4_stage.svg",
+							"locations": [
+
+							]
+						},
+						{
+							"id": "7",
+							"title": "5 этаж",
+							"map": "../img/map/1_5_stage.svg",
+							"locations": [
+
+							]
+						},
+						{
+							"id": "8",
+							"title": "6 этаж",
+							"map": "../img/map/1_6_stage.svg",
+							"locations": [
+
+							]
+						},
+						{
+							"id": "9",
+							"title": "7 этаж",
+							"map": "../img/map/1_7_stage.svg",
+							"locations": [
+
+							]
+						},
+						{
+							"id": "10",
+							"title": "8 этаж",
+							"map": "../img/map/1_8_stage.svg",
+							"locations": [
+
+							]
+						},
+						{
+							"id": "11",
+							"title": "9 этаж",
+							"map": "../img/map/1_9_stage.svg",
+							"locations": [
+
+							]
+						},
+						{
+							"id": "5",
+							"title": "10 этаж",
+							"map": "../img/map/1_10_stage.svg",
+							"locations": [
+
+							]
+						}
+					]
+				},
+				height: 480,
+				minimap: false,
+				sidebar: false,
+				hovertip: true,
+				developer: false,
+				thumbholder: true,
+				marker: 'hidden',
+				maxscale: 3
+			});
+		})
+	</script>
 </body>
 
 </html>
